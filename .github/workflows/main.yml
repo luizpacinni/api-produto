@@ -77,6 +77,7 @@ jobs:
       - name: Deploy WebAPI
         uses: Azure/k8s-deploy@v1.3
         with:
+          images: luizpacinni/api-bootcamp-produto:${{github.run_number}}
           manifests: |
             k8s/api/deployment.yaml
             k8s/api/service.yaml
